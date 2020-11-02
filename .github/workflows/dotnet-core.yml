@@ -17,9 +17,7 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.301
-    - name: Install dependencies
-      run: dotnet restore TestMe/TestMe.csproj
-    - name: Build
-      run: dotnet build TestMe/TestMe.csproj --configuration Release --no-restore
     - name: Publish
-      run: dotnet publish TestMe/TestMe.csproj --configuration Release --no-build --output publish
+      run: dotnet publish TestMe/TestMe.csproj --configuration Release --output publish
+    - name: Zip
+      run: zip -r -j TestMe.zip publish/*
