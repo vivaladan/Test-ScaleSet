@@ -33,7 +33,7 @@ jobs:
           Changes in this Release
           - First Change
           - Second Change
-        draft: false
+        draft: true
         prerelease: true
     - name: Upload TestMe.zip
       id: upload-release-asset 
