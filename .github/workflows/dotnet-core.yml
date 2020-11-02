@@ -21,7 +21,5 @@ jobs:
       run: dotnet restore TestMe/TestMe.csproj
     - name: Build
       run: dotnet build TestMe/TestMe.csproj --configuration Release --no-restore
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal
     - name: Publish
       run: dotnet publish TestMe/TestMe.csproj --configuration Release --no-build --output publish
