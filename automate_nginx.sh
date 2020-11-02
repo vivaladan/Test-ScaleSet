@@ -6,4 +6,4 @@ sudo dpkg -i packages-microsoft-prod.deb
 apt-get update -y && apt-get upgrade -y
 apt-get install -y nginx apt-transport-https aspnetcore-runtime-3.1
 
-echo "Hello World 2" | sudo tee -a /var/www/html/index.html
+echo "Hello World $1" | sudo tee -a /var/www/html/index.html
